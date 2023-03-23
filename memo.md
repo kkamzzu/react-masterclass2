@@ -203,3 +203,18 @@ function Circle({ bgColor, borderColor }: CircleProps) {
 
 export default Circle;
 ```
+
+# Forms
+
+```js
+const {
+currentTarget: {value, tagName, width, id}
+} = event;
+```
+<!-- same -->
+```js
+const value = event.currentTarget.value;
+const tagName = event.currentTarget.tagName;
+const width = event.currentTarget.width;
+const id = event.currentTarget.id;
+```
