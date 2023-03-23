@@ -31,3 +31,9 @@ plus("a",1)
 
 - 아주 큰Github repository
 - 모든 유명한 npm 라이브러리를 가지고 있는 저장소
+
+
+# Typing the Props
+
+- typeScript를 사용하는 이유: 코드가 실행되기 `전`에 오류를 확인하기 위해.
+- interface 는 object가 어떤식으로 보일지 설명해주는 것.
