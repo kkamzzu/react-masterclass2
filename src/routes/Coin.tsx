@@ -10,4 +10,4 @@ function Coin() {
   return <h1>Coin: {coinId}</h1>;
 }
 
-export default Coin;   
+export default Coin;     
