@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from "styled-components";
 import App from './App';
 import App02 from './App02';
 import App03 from './App03';
-import { ThemeProvider } from "styled-components";
-import { dartkTheme, lightTheme } from './theme';
-  
+import { Theme } from './theme';
 
-ReactDOM.render (
+
+
+
+
+ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={dartkTheme}>
-    <App />
-    <App02 />
-    <App03 />
+    <ThemeProvider theme={Theme}>
+      <App />
+      {/* <App02 />
+    <App03 /> */}
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
