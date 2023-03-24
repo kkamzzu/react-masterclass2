@@ -220,3 +220,16 @@ const id = event.currentTarget.id;
 ```
 
 # Themes
+
+# Home part one
+
+<!-- link -->
+```js
+ <CoinsList>
+        {coins.map(coin =>
+          <Coin key={coin.id}>
+            <Link to={`/${coin.id}`}>
+              {coin.name} &rarr;</Link>
+          </Coin>)}
+      </CoinsList>
+```
