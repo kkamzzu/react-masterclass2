@@ -233,3 +233,34 @@ const id = event.currentTarget.id;
           </Coin>)}
       </CoinsList>
 ```
+
+
+# React Query
+- 우리가 우리 스스로 실행하고 있었던 로직들을 축약해줌
+
+```js
+ const [coins, setCoins] = useState<CoinInterface[]>([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    (async () => {
+      const response = await fetch("https://api.coinpaprika.com/v1/coins");
+      const json = await response.json();
+      setCoins(json.slice(0, 100));
+      setLoading(false)
+    })();
+  }, []);
+```
+- 이런걸 자동으로 해줌.
+
+- React Query를 사용하기 위해서는 fetcher함수가 필요해요
+- API와 관련된 것들은 component들과 멀리 떨어트려 놓음
+
+# fetcher 
+
+- fetcher함수는 꼭 fetch promise를 return 해줘야함
+
+# useQuery hook
+- 2개의 argument를 필요로 함 (1.queryKey 2.fetcher function)
+```js
+useQuery("allCoins", fetchCoins)
+```
