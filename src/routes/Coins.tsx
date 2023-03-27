@@ -64,7 +64,8 @@ interface ICoin {
 }
 
 function Coins() {
-  const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins)
+  const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
+  console.log(isLoading);
   return (
     <Container>
       <Header>

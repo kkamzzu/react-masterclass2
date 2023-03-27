@@ -264,3 +264,5 @@ const id = event.currentTarget.id;
 ```js
 useQuery("allCoins", fetchCoins)
 ```
+
+# Devtools
