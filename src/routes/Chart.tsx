@@ -1,4 +1,8 @@
-function Chart() {
+interface CharProps {
+  coinId: string;
+}
+
+function Chart({ coinId }: CharProps) {
   return <h1>Chart</h1>
 }
 
