@@ -68,18 +68,18 @@ a {
 
 
 function App() {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(false);
   // toggle of dark,light mode
   const toggleDark = () => setIsDark((current) => !current);
   return (
     // Fragment: 유령 컴포넌트
     <><ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-      <button onClick={toggleDark}>Toggle Mode</button>
       <GlobalStyle />
-      <Router />
+      <Router isDark={isDark} toggleDark={toggleDark} />
       <ReactQueryDevtools initialIsOpen={true} />
     </ThemeProvider></>
   );
 }
+
 
 export default App;

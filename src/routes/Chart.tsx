@@ -1,11 +1,13 @@
 import { useQuery } from "react-query";
 import { fetchCoinHistory } from "../api";
 
+
 interface ChartProps {
   coinId: string;
+  isDark: boolean;
 }
 
-function Chart({ coinId }: ChartProps) {
+function Chart({ coinId, isDark }: ChartProps) {
   const { isLoading, data } = useQuery(["ohlcv", coinId], () =>
     fetchCoinHistory(coinId)
   );
