@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import { useQuery } from "react-query";
 import { Switch, Route, useLocation, useParams, useRouteMatch } from "react-router-dom";
 import { Link } from "react-router-dom"
@@ -140,11 +140,9 @@ interface PriceData {
   };
 }
 
-interface ICoinProps {
-  isDark: boolean;
-}
+interface ICoinProps { }
 
-function Coin({ isDark }: ICoinProps) {
+function Coin({ }: ICoinProps) {
   const { coinId } = useParams<RouteParams>();
   const { state } = useLocation<RouteState>();
   const priceMath = useRouteMatch("/:coinId/price");
@@ -204,7 +202,7 @@ function Coin({ isDark }: ICoinProps) {
               <Price></Price>
             </Route>
             <Route path={`/:coinIdchart`}>
-              <Chart isDark={isDark} coinId={coinId}></Chart>
+              {/* <Chart /> */}
             </Route>
           </Switch>
         </>
